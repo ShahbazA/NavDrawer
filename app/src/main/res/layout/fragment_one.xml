@@ -3,10 +3,41 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tv_fragment_name"
-        android:text="Fragment one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_medicine_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Bar code" />
+        </RelativeLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_create_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="20dp"
+            android:src="@drawable/create_new"
+            app:layout_anchor="@id/rl"
+            app:layout_anchorGravity="bottom|right|end"
+            app:backgroundTint="#0866C6"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:fabSize="normal"/>
+
+
+    </android.support.design.widget.CoordinatorLayout>
 
 </LinearLayout>

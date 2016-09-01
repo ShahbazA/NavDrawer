@@ -48,9 +48,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    /* Assinging the toolbar object ot the view
-    and setting the the Action bar to our toolbar
-     */
+        /* Assinging the toolbar object to the view
+        and setting the the Action bar to our toolbar
+         */
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
 
@@ -90,8 +90,6 @@ public class MainActivity extends AppCompatActivity {
         }; // Drawer Toggle Object Made
         Drawer.addDrawerListener(mDrawerToggle); // Drawer Listener set to the Drawer toggle
         mDrawerToggle.syncState();               // Finally we set the drawer toggle sync State
-
-
 
         mRecyclerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(getApplicationContext(), new RecyclerItemClickListener.OnItemClickListener() {
